@@ -1,0 +1,46 @@
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     width="16" height="16"
+     viewBox="0 0 16 16">
+	<style>
+		.foreground {
+			fill: black;
+			opacity: 0.7;
+		}
+	</style>
+	<defs>
+		<path id="tab"
+		      d="M 0,0
+		         v -1
+		         a 1,1 0 0,0 1,-1
+		         v -1
+		         a 1,1 0 0,1 1,-1
+		         h 8
+		         a 1,1 0 0,1 1,1
+		         v 1
+		         a 1,1 0 0,0 1,1
+		         v 1
+		         z" />
+		<path id="occluded-tab"
+		      d="M 1,-2
+		         v -1
+		         a 1,1 0 0,1 1,-1
+		         h 8
+		         a 1,1 0 0,1 1,1
+		         v 1
+		         a 1,1 0 0,0 1,1
+		         v 1
+		         h -2
+		         a 2,2 0 0,0 -2,-2
+		         z" />
+	</defs>
+	<use href="#tab"
+	     class="foreground"
+	     x="0" y="13" />
+	<use href="#occluded-tab"
+	     class="foreground"
+	     x="2" y="10" />
+	<use href="#occluded-tab"
+	     class="foreground"
+	     x="4" y="7" />
+</svg>
