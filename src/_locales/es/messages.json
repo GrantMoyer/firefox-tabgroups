@@ -1,0 +1,12 @@
+{
+	"extension_name": {
+		"message": "Grupos de pestañas simplificados"
+	},
+	"extension_author": {
+		"message": "Dennis Schubert <mozilla@dennis-schubert.de>"
+	},
+	"extension_description": {
+		"message": "Provee la funcionalidad de gestionar grupos de pestañas similar a la funcionalidad removida de TabView/TabGroups/Panorama."
+	}
+}
+

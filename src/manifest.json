@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_extension_name__",
+	"version": "0.6.0",
+
+	"default_locale": "en",
+
+	"description": "__MSG_extension_description__",
+	"author": "__MSG_extension_author__",
+	"homepage_url": "https://github.com/denschub/firefox-tabgroups",
+
+	"icons": {
+		"32": "content/icons/extension-32.png",
+		"64": "content/icons/extension-64.png"
+	},
+
+	"permissions": [
+		"activeTab"
+	],
+
+	"browser_action": {
+		"default_icon": {
+			"16": "content/icons/togglebutton/icon-16.png",
+			"32": "content/icons/togglebutton/icon-32.png"
+		},
+		"default_title": "Tab Groups",
+		"default_popup": "popup/groups.html"
+	}
+}

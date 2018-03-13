@@ -1,0 +1,11 @@
+{
+	"extension_name": {
+		"message": "Simplified Tab Groups"
+	},
+	"extension_author": {
+		"message": "Dennis Schubert <mozilla@dennis-schubert.de>"
+	},
+	"extension_description": {
+		"message": "Permet de remplacer la gestion des groupes d'onglets supprimée suite à l'abandon de Panorama."
+	}
+}

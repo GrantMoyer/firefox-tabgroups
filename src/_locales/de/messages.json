@@ -1,0 +1,11 @@
+{
+	"extension_name": {
+		"message": "Einfache Tab-Gruppen"
+	},
+	"extension_author": {
+		"message": "Dennis Schubert <mozilla@dennis-schubert.de>"
+	},
+	"extension_description": {
+		"message": "Ermöglicht die Gruppierung von Tabs ähnlich den entfernten Panorama-Funktionen"
+	}
+}
