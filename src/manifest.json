@@ -18,6 +18,23 @@
 		"activeTab"
 	],
 
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Alt+G"
+			}
+		},
+		"switch_group": {
+			"suggested_key": {
+				"default": "Ctrl+Comma"
+			}
+		}
+	},
+
+	"background": {
+		"scripts": ["index.js"]
+	},
+
 	"browser_action": {
 		"default_icon": "content/icons/button.svg",
 		"default_title": "__MSG_browser_action_title__",

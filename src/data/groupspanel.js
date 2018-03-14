@@ -2,46 +2,53 @@ const store = Redux.createStore(Reducer);
 
 const Actions = {
   addGroup: function() {
-    //addon.port.emit("Group:Add");
+    browser.runtime.sendMessage({type: "Group:Add"});
   },
 
   addGroupWithTab: function(sourceGroupID, tabIndex) {
-    //addon.port.emit("Group:AddWithTab", {sourceGroupID, tabIndex});
+    browser.runtime.sendMessage({type: "Group:AddWithTab",
+                                 event: {sourceGroupID, tabIndex}});
   },
 
   closeGroup: function(groupID) {
-    //addon.port.emit("Group:Close", {groupID});
+    browser.runtime.sendMessage({type: "Group:Close",
+                                 event: {groupID}});
   },
 
   uiHeightChanged: function() {
-    //addon.port.emit("UI:Resize", {
-    //  width: document.body.clientWidth,
-    //  height: document.body.clientHeight
-    //});
+    browser.runtime.sendMessage({type: "UI:Resize",
+                                 event: {width: document.body.clientWidth,
+                                         height: document.body.clientHeight}});
   },
 
   renameGroup: function(groupID, title) {
-    //addon.port.emit("Group:Rename", {groupID, title});
+    browser.runtime.sendMessage({type: "Group:Rename",
+                                 event: {groupID, title}});
   },
 
   selectGroup: function(groupID) {
-    //addon.port.emit("Group:Select", {groupID});
+    browser.runtime.sendMessage({type: "Group:Select",
+                                 event: {groupID}});
   },
 
   moveTabToGroup: function(sourceGroupID, tabIndex, targetGroupID) {
-    //addon.port.emit("Group:Drop", {sourceGroupID, tabIndex, targetGroupID});
+    browser.runtime.sendMessage({type: "Group:Drop",
+                                 event: {sourceGroupID, tabIndex, targetGroupID}});
   },
 
   selectTab: function(groupID, tabIndex) {
-    //addon.port.emit("Tab:Select", {groupID, tabIndex});
+    browser.runtime.sendMessage({type: "Tab:Select",
+                                 event: {groupID, tabIndex}});
   },
 
   dragTab: function(groupID, tabIndex) {
-    //addon.port.emit("Tab:Drag", {groupID, tabIndex});
+    browser.runtime.sendMessage({type: "Tab:Drag",
+                                 event: {groupID, tabIndex}});
   },
 
   dragTabStart: function(groupID, tabIndex) {
-    //addon.port.emit("Tab:DragStart", {groupID, tabIndex});
+    browser.runtime.sendMessage({type: "Tab:DragStart",
+                                 event: {groupID, tabIndex}});
   }
 };
 
@@ -67,10 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-//addon.port.on("Groups:Changed", (tabgroups) => {
-//  store.dispatch(ActionCreators.setTabgroups(tabgroups));
-//});
-
-//addon.port.on("Groups:CloseTimeoutChanged", (timeout) => {
-//  store.dispatch(ActionCreators.setGroupCloseTimeout(timeout));
-//});
+browser.runtime.onMessage.addListener((message) => {
+  switch (message.type) {
+  case "Groups:Changed":
+    store.dispatch(ActionCreators.setTabgroups(message.tabgroups));
+    break;
+  case "Groups:CloseTimeoutChanged":
+    store.dispatch(ActionCreators.setGroupCloseTimeout(message.timeout));
+    break;
+  }
+});

@@ -78,20 +78,20 @@ const Group = React.createClass({
             className: "group-title"
           },
           titleElement,
-          //React.createElement(
-          //  GroupControls,
-          //  {
-          //    closing: this.state.closing,
-          //    editing: this.state.editing,
-          //    expanded: this.state.expanded,
-          //    onClose: this.handleGroupCloseClick,
-          //    onEdit: this.handleGroupEditClick,
-          //    onEditAbort: this.handleGroupEditAbortClick,
-          //    onEditSave: this.handleGroupEditSaveClick,
-          //    onExpand: this.handleGroupExpandClick,
-          //    onUndoCloseClick: this.handleGroupCloseAbortClick
-          //  }
-          //)
+          React.createElement(
+            GroupControls,
+            {
+              closing: this.state.closing,
+              editing: this.state.editing,
+              expanded: this.state.expanded,
+              onClose: this.handleGroupCloseClick,
+              onEdit: this.handleGroupEditClick,
+              onEditAbort: this.handleGroupEditAbortClick,
+              onEditSave: this.handleGroupEditSaveClick,
+              onExpand: this.handleGroupExpandClick,
+              onUndoCloseClick: this.handleGroupCloseAbortClick
+            }
+          )
         ),
         this.state.expanded && React.createElement(
           TabList,
