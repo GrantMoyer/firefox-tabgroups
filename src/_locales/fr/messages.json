@@ -7,5 +7,16 @@
 	},
 	"extension_description": {
 		"message": "Permet de remplacer la gestion des groupes d'onglets supprimée suite à l'abandon de Panorama."
+	},
+
+	"browser_action_title": {
+		"message": "Groupes d'onglets"
+	},
+
+	"popup_add_group": {
+		"message": "Ajouter un groupe"
+	},
+	"popup_unnamed_group": {
+		"message": "Groupe sans nom"
 	}
 }

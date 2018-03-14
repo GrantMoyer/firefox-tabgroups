@@ -7,6 +7,17 @@
 	},
 	"extension_description": {
 		"message": "Provee la funcionalidad de gestionar grupos de pestañas similar a la funcionalidad removida de TabView/TabGroups/Panorama."
+	},
+
+	"browser_action_title": {
+		"message": "Grupos de Pestañas"
+	},
+
+	"popup_add_group": {
+		"message": "Crear nuevo grupo"
+	},
+	"popup_unnamed_group": {
+		"message": "Grupo sin nombre"
 	}
 }
 

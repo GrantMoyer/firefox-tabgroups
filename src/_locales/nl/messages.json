@@ -1,0 +1,12 @@
+{
+	"browser_action_title": {
+		"message": "Tabbladen groeperen"
+	},
+
+	"popup_add_group": {
+		"message": "Nieuwe groep toevoegen"
+	},
+	"popup_unnamed_group": {
+		"message": "Niet-benoemde groep"
+	}
+}

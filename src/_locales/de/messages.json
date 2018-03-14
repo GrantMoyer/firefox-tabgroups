@@ -7,5 +7,16 @@
 	},
 	"extension_description": {
 		"message": "Ermöglicht die Gruppierung von Tabs ähnlich den entfernten Panorama-Funktionen"
+	},
+
+	"browser_action_title": {
+		"message": "Tabs gruppieren"
+	},
+
+	"popup_add_group": {
+		"message": "Neue Gruppe anlegen"
+	},
+	"popup_unnamed_group": {
+		"message": "Unbenannte Gruppe"
 	}
 }

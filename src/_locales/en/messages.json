@@ -7,5 +7,16 @@
 	},
 	"extension_description": {
 		"message": "Provides tab grouping features similar to the removed TabView/TabGroups/Panorama features."
+	},
+
+	"browser_action_title": {
+		"message": "Group Tabs"
+	},
+
+	"popup_add_group": {
+		"message": "Create new group"
+	},
+	"popup_unnamed_group": {
+		"message": "Unnamed Group"
 	}
 }

@@ -20,7 +20,7 @@
 
 	"browser_action": {
 		"default_icon": "content/icons/button.svg",
-		"default_title": "Tab Groups",
+		"default_title": "__MSG_browser_action_title__",
 		"default_popup": "popup/groups.html"
 	}
 }
