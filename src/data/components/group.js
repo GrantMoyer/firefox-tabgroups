@@ -29,7 +29,7 @@ const Group = React.createClass({
 
   getTitle: function() {
     return this.props.group.title || (
-        addon.options.l10n.unnamed_group + " " + this.props.group.id
+        browser.i18n.getMessage("popup_unnamed_group") + " " + this.props.group.id
       );
   },
 
@@ -78,20 +78,20 @@ const Group = React.createClass({
             className: "group-title"
           },
           titleElement,
-          React.createElement(
-            GroupControls,
-            {
-              closing: this.state.closing,
-              editing: this.state.editing,
-              expanded: this.state.expanded,
-              onClose: this.handleGroupCloseClick,
-              onEdit: this.handleGroupEditClick,
-              onEditAbort: this.handleGroupEditAbortClick,
-              onEditSave: this.handleGroupEditSaveClick,
-              onExpand: this.handleGroupExpandClick,
-              onUndoCloseClick: this.handleGroupCloseAbortClick
-            }
-          )
+          //React.createElement(
+          //  GroupControls,
+          //  {
+          //    closing: this.state.closing,
+          //    editing: this.state.editing,
+          //    expanded: this.state.expanded,
+          //    onClose: this.handleGroupCloseClick,
+          //    onEdit: this.handleGroupEditClick,
+          //    onEditAbort: this.handleGroupEditAbortClick,
+          //    onEditSave: this.handleGroupEditSaveClick,
+          //    onExpand: this.handleGroupExpandClick,
+          //    onUndoCloseClick: this.handleGroupCloseAbortClick
+          //  }
+          //)
         ),
         this.state.expanded && React.createElement(
           TabList,

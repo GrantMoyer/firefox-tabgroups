@@ -28,7 +28,7 @@ const GroupAddButton = React.createClass({
         },
         React.DOM.span(
           {className: "group-title"},
-          addon.options.l10n.add_group
+          browser.i18n.getMessage("popup_add_group")
         )
       )
     );
